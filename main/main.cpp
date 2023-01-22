@@ -70,7 +70,7 @@ LRESULT CALLBACK WinSunProc(
 	{
 	case WM_CHAR:
 		char szChar[20];
-		sprintf_s(szChar, "您刚按下了: %c", wParam);
+		sprintf_s(szChar, "您刚按下了????: %c", wParam);
 		MessageBox(hwnd, szChar, "char", NULL);
 		break;
 	case WM_LBUTTONDOWN:
@@ -83,7 +83,7 @@ LRESULT CALLBACK WinSunProc(
 		EndPaint(hwnd, &ps);
 		break;
 	case WM_CLOSE:
-		ret = MessageBox(hwnd, "真的结束？", "message", MB_YESNO);
+		ret = MessageBox(hwnd, "是否真的结束？", "message", MB_YESNO);
 		if (ret == IDYES)
 		{
 			DestroyWindow(hwnd);
@@ -92,9 +92,9 @@ LRESULT CALLBACK WinSunProc(
 	case WM_DESTROY:
 		PostQuitMessage(0);
 		break;
-	/*default:
+	default:
 		return DefWindowProc(hwnd, uMsg, wParam, lParam);
-		break;*/
+		break;
 	}
 
 	return 0;
