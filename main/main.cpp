@@ -70,7 +70,7 @@ LRESULT CALLBACK WinSunProc(
 	{
 	case WM_CHAR:
 		char szChar[20];
-		sprintf_s(szChar, "您刚按下了: %c", wParam);
+		sprintf_s(szChar, "1232234313您刚按下了: %c", wParam);
 		MessageBox(hwnd, szChar, "char", NULL);
 		break;
 	case WM_LBUTTONDOWN:
